@@ -42,7 +42,7 @@ def objective(trial):
     criterion = nn.BCELoss()
 
     writer = SummaryWriter(f"runs/GAN_MNIST_trial_{trial.number}")
-    writer.add_hparams(trial.params, {})  # Log hyperparameters
+    writer.add_hparams(trial.params, {})
 
     step = 0
     for epoch in tqdm(range(num_epochs)):
